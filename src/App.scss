@@ -1,0 +1,18 @@
+/** @define app */
+
+@import "./vars";
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: $gutter;
+
+    &__logo {
+        display: block;
+        width: 50%;
+        max-width: 250px;
+    }
+}

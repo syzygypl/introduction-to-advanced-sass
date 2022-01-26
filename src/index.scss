@@ -1,10 +1,13 @@
+@use "../node_modules/normalize.css/normalize.css";
+@use "./vars" as *;
+
 body {
     display: block;
     min-height: 100%;
     margin: 0;
     padding: 0;
-    background: #222;
-    color: #fff;
+    background: $color-bg;
+    color: $color-text;
     font: normal 1em/1.5 Arial, sans-serif;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
