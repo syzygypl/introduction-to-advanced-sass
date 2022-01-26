@@ -207,4 +207,4 @@ create the importer](https://sass-lang.com/documentation/js-api/modules#CustomFu
 </details>
 
 ____
-© [SYZYGY Warsaw](https://www.syzygy.pl/) / Marcin Gościcki ([@norin89](https://github.com/norin89)) — 2022
+© Marcin Gościcki ([@norin89](https://github.com/norin89)) / [SYZYGY Warsaw](https://www.syzygy.pl/) — 2022

@@ -1,11 +1,12 @@
 const bemSettings = require('stylelint-config-syzygy-bem');
-bemSettings['rules']['plugin/selector-bem-pattern']['implicitComponents'] = false;
+
+bemSettings.rules['plugin/selector-bem-pattern'].implicitComponents = false;
 
 module.exports = {
-  customSyntax: "postcss-scss",
+  customSyntax: 'postcss-scss',
   plugins: [
     'stylelint-scss',
-    "stylelint-selector-bem-pattern",
+    'stylelint-selector-bem-pattern',
   ],
   extends: [
     'stylelint-config-syzygy-scss',
@@ -14,7 +15,7 @@ module.exports = {
   ignoreFiles: [
     'src/examples/**/*',
   ],
-  'rules': {
-    'plugin/selector-bem-pattern': bemSettings['rules']['plugin/selector-bem-pattern'],
+  rules: {
+    'plugin/selector-bem-pattern': bemSettings.rules['plugin/selector-bem-pattern'],
   },
 };
