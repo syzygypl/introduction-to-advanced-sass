@@ -1,0 +1,64 @@
+/** @define markdown */
+
+@use "src/vars" as *;
+
+.markdown {
+    display: block;
+
+    /* stylelint-disable plugin/selector-bem-pattern */
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        margin-top: 4em;
+    }
+
+    details {
+        margin-bottom: 4em;
+    }
+
+    summary {
+        opacity: .667;
+        cursor: pointer;
+    }
+
+    a {
+        border-bottom: 1px dotted;
+        color: inherit;
+        text-decoration: none;
+        transition: opacity $transition-time;
+
+        &:focus,
+        &:hover {
+            opacity: .5;
+        }
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px dashed;
+        opacity: .5;
+    }
+
+    code {
+        color: $color-primary;
+    }
+
+    blockquote {
+        margin: 2em 0;
+        padding: 1em 2em;
+        background: $color-bg-odd;
+        color: $color-text;
+    }
+
+    .-is-hidden {
+        display: none;
+    }
+
+    > p:last-child {
+        text-align: center;
+        opacity: .5;
+    }
+    /* stylelint-enable plugin/selector-bem-pattern */
+}

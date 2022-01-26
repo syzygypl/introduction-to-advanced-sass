@@ -1,5 +1,28 @@
+@use "sass:color";
+
+$breakpoints: (
+    "xs": 0,
+    "md": 600,
+    "lg": 992
+) !default;
 $content-max-width: 960px;
 $gutter: 10px;
 
-$color-bg: #222 !default;
+$z-index: (
+    "header": 19,
+);
+
+$color-bg: #1a1a1a !default;
+$color-bg-odd: color.adjust($color-bg, $lightness: -10%);
 $color-text: #fff !default;
+$color-primary: #c9659b !default;
+
+$font-primary: "Arial", sans-serif;
+$font-sizes-base: (
+    xs: 12px,
+    md: 14px,
+    lg: 16px,
+);
+$line-height: 1.5;
+
+$transition-time: .5s;

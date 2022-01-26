@@ -1,7 +1,12 @@
-// https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
+exports.onCreateWebpackConfig = ({ actions, getConfig }) => {
+  const config = getConfig();
+  config.module.rules = [
+    ...config.module.rules,
+    {
+      test: /\.md$/,
+      use: 'raw-loader',
+    },
+  ];
 
-/**
- * Gatsby Node APIs
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/
- */
+  actions.replaceWebpackConfig(config);
+};

@@ -1,0 +1,44 @@
+@use "sass:map";
+@use "sass:list";
+@use "vars" as *;
+
+@function breakpoint($key) {
+    @return get-map-value($breakpoints, $key) * 1px;
+}
+
+@function get-map-value($map, $keys...) {
+    @each $key in $keys {
+        $isValidKey: map.has-key($map, $key);
+
+        @if ($isValidKey == false) {
+            @warn "There is no element with key: '#{$key}'.";
+
+            @return null;
+        }
+
+        $map: map.get($map, $key);
+    }
+
+    @return $map;
+}
+
+// Similar to `get-map-value` but falls back to smaller BP if there's no key found in map for given BP
+@function get-bp-value($map, $bp) {
+    $index: list.index(map.keys($breakpoints), $bp);
+
+    @if not $index or $index <= 0 {
+        @return null;
+    }
+
+    $hasKey: map.has-key($map, $bp);
+
+    @if ($hasKey == false) {
+        @return get-bp-value($map, nth(map-keys($breakpoints), $index - 1));
+    }
+
+    @return map-get($map, $bp);
+}
+
+@function z-index($key) {
+    @return get-map-value($z-index, $key);
+}

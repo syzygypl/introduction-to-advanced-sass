@@ -1,8 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
-import { Link } from 'gatsby';
 
 import './Header.scss';
+import icon from '../../images/icon.png';
 
 interface HeaderProps {
   siteTitle: string;
@@ -15,9 +15,8 @@ function Header({
 }: HeaderProps) {
   return (
     <header className={cx('header', className)}>
-      <Link className="header__link" to="/">
-        {siteTitle}
-      </Link>
+      <img className="header__logo" src={icon} alt="Sass logo" />
+      {siteTitle}
     </header>
   );
 }

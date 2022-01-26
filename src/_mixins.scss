@@ -1,0 +1,46 @@
+@use "sass:meta";
+@use "functions" as *;
+
+@mixin media($minWidth, $maxWidth: null) {
+    @if meta.type-of($minWidth) != number {
+        $minWidth: breakpoint($minWidth);
+    }
+
+    @if ($minWidth) {
+        @if ($maxWidth) {
+            @if meta.type-of($maxWidth) != number {
+                $maxWidth: breakpoint($maxWidth) - 1px;
+            }
+
+            @if ($minWidth <= 0) {
+                @media (max-width: $maxWidth) {
+                    @content;
+                }
+            } @else {
+                @media (min-width: $minWidth) and (max-width: $maxWidth) {
+                    @content;
+                }
+            }
+        } @else {
+            @if ($minWidth > 0) {
+                @media (min-width: $minWidth) {
+                    @content;
+                }
+            } @else {
+                @content;
+            }
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from '#{$minWidth}'." + " Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+@mixin each-breakpoint($map, $properties) {
+    @each $bp, $value in $map {
+        @include media($bp) {
+            @each $property in $properties {
+                #{$property}: $value;
+            }
+        }
+    }
+}

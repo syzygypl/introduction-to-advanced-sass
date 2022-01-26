@@ -1,0 +1,53 @@
+/** @define layout */
+@use "node_modules/normalize.css/normalize.css";
+@use "src/vars" as *;
+@use "src/mixins" as *;
+
+/* stylelint-disable plugin/selector-bem-pattern */
+body {
+    display: block;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: $color-bg-odd;
+    color: $color-text;
+    font: normal 1em/#{$line-height} $font-primary;
+    @include each-breakpoint($font-sizes-base, font-size);
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+/* stylelint-enable plugin/selector-bem-pattern */
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    min-height: 100vh;
+    background: $color-bg;
+    color: $color-text;
+
+    &__content {
+        max-width: $content-max-width;
+        margin: auto;
+        padding: ($gutter * 4) ($gutter * 2);
+        text-align: left;
+    }
+
+    &__image {
+        display: block;
+        margin: 0 auto;
+        width: 40%;
+        max-width: 250px;
+    }
+}

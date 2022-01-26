@@ -1,17 +1,18 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
 import SEO from '../components/SEO';
+import Layout from '../components/Layout/Layout';
+import Markdown from '../components/Markdown/Markdown';
 import logo from '../images/logo.svg';
+import readme from '../../README.md';
 
 function Index() {
   return (
     <Layout>
       <SEO title="Introduction to advanced Sass" />
-      <img src={logo} style={{ maxWidth: '250px' }} alt="Sass logo" />
-      <h1>
-        Introduction to advanced Sass.
-      </h1>
+      <Markdown>
+        {readme}
+      </Markdown>
     </Layout>
   );
 }

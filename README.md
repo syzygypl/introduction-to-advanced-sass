@@ -2,10 +2,12 @@
 
 ____
 
-This repo is a brief description of Sass features and good practices spiced up with some explanations, examples
-and useful links. It doesn't cover all the aspects (_like [partials](https://sass-lang.com/documentation/at-rules/use#partials),
+This is a brief description of Sass features and good practices spiced up with some explanations, examples  and useful
+links. It doesn't cover all the aspects (_like [partials](https://sass-lang.com/documentation/at-rules/use#partials),
 [nesting](https://sass-lang.com/documentation/style-rules#nesting) or [operators](https://sass-lang.com/documentation/operators)_)
 and requires at least basic knowledge of Sass. [Learn Sass](https://sass-lang.com/guide)!
+
+<div class="-is-hidden">
 
 ____
 
@@ -13,6 +15,8 @@ ____
   <strong>TODO:</strong>
   How to run examples.
 </p>
+
+</div>
 
 ____
 

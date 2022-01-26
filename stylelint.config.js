@@ -17,5 +17,6 @@ module.exports = {
   ],
   rules: {
     'plugin/selector-bem-pattern': bemSettings.rules['plugin/selector-bem-pattern'],
+    'selector-class-pattern': false,
   },
 };

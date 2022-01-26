@@ -1,0 +1,21 @@
+/** @define header */
+
+@use "src/vars" as *;
+@use "src/functions" as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: z-index("header");
+    display: block;
+    padding: $gutter * 2;
+    background: $color-bg-odd;
+    color: $color-text;
+    text-align: center;
+
+    &__logo {
+        height: 2em;
+        margin: -1em 1em -1em 0;
+        vertical-align: middle;
+    }
+}

@@ -2,7 +2,8 @@ import React, { ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import './Layout.scss';
-import Header from './Header';
+import Header from '../Header/Header';
+import logo from '../../images/logo.svg';
 
 interface LayoutProps {
   children: ReactNode;
@@ -29,6 +30,7 @@ function Layout({
     <div className="layout">
       <Header className="layout__header" siteTitle={siteTitle} />
       <main className="layout__content">
+        <img className="layout__image" src={logo} alt="Sass logo" />
         {children}
       </main>
     </div>
