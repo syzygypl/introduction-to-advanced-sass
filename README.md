@@ -7,16 +7,13 @@ links. It doesn't cover all the aspects (_like [partials](https://sass-lang.com
 [nesting](https://sass-lang.com/documentation/style-rules#nesting) or [operators](https://sass-lang.com/documentation/operators)_)
 and requires at least basic knowledge of Sass. [Learn Sass](https://sass-lang.com/guide)!
 
-<div class="-is-hidden">
-
 ____
 
 <p style="color: red;">
-  <strong>TODO:</strong>
-  How to run examples.
+  <strong>TODO:</strong><br />
+  How to run project and what for?<br />
+  Describe that project itself is an example of stuff described below.<br />
 </p>
-
-</div>
 
 ____
 
@@ -56,7 +53,21 @@ new at-rules (`@use` and `@forward`) and built-in modules that includes (_not on
 - **[Introducing Sass Modules](https://css-tricks.com/introducing-sass-modules/)** — css-tricks.com
 </details>
 
-## 3. Modules - `@use` and `@forward`.
+## 3. Values and `$variables`.
+<details>
+<summary><i>Click to expand!</i></summary>
+
+<p style="color: red;">
+  <strong>TODO:</strong>
+  Complex value types like Maps and Lists.
+</p>
+
+**Further readings:**
+- [Sass: Documentation - Values](https://sass-lang.com/documentation/values) — sass-lang.com
+- [Sass: Documentation - Variables](https://sass-lang.com/documentation/variables) — sass-lang.com
+</details>
+
+## 4. Modules - `@use` and `@forward`.
 <details>
 <summary><i>Click to expand!</i></summary>
 
@@ -73,26 +84,10 @@ Because of global scope that is easy to unintentionally override some members. _
 `@forward` rule works similar to `@use` but allows other modules to be `@use`d directly from module where are forwarded.
 It's handful when you want to organize stylesheets across many files but provide single entry point - great for UI libraries!
 
-[Examples.](src/examples/3-modules)
-
 **Further readings:**
 - [Sass: Documentation - @import](https://sass-lang.com/documentation/at-rules/import) — sass-lang.com
 - [Sass: Documentation - @use](https://sass-lang.com/documentation/at-rules/use) — sass-lang.com
 - [Sass: Documentation - @forward](https://sass-lang.com/documentation/at-rules/forward) — sass-lang.com
-</details>
-
-## 4. Values and `$variables`.
-<details>
-<summary><i>Click to expand!</i></summary>
-
-<p style="color: red;">
-  <strong>TODO:</strong>
-  Complex value types like Maps and Lists.
-</p>
-
-**Further readings:**
-- [Sass: Documentation - Values](https://sass-lang.com/documentation/values) — sass-lang.com
-- [Sass: Documentation - Variables](https://sass-lang.com/documentation/variables) — sass-lang.com
 </details>
 
 ## 5. `@function`.
@@ -120,16 +115,7 @@ in the [official documentation of Sass]((https://web.archive.org/web/20190208030
 Now we have better alternatives for that, like [Autoprefixer](https://autoprefixer.github.io/).
 
 **`@mixin`s are still very useful when we have reusable blocks of styles** or / and we want to assure consistency.
-
-<p style="color: red;">
-  <strong>TODO:</strong>
-  Create and link examples.
-</p>
-
-Good examples are:
-* element resets, // button reset
-* repetitive styles, // border and box shadows
-* media queries.
+Good examples are: elements resets, repetitive styles (_like consistent borders and box shadows_) or media queries.
 
 **Further readings:**
 - [Sass: Documentation - @mixin and @include](https://sass-lang.com/documentation/at-rules/mixin) — sass-lang.com
@@ -185,7 +171,7 @@ create the importer](https://sass-lang.com/documentation/js-api/modules#CustomFu
 
 <p style="color: red;">
   <strong>TODO:</strong>
-  Example of custom function and JSON importer.
+  Add custom functions and JSON importer to the repo.
 </p>
 
 **Further readings:**
