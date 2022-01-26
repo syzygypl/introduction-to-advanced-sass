@@ -56,12 +56,23 @@ new at-rules (`@use` and `@forward`) and built-in modules that includes (_not on
 <details>
 <summary><i>Click to expand!</i></summary>
 
-<p style="color: red;">
-  <strong>TODO:</strong>
-  Why Modules? Difference between old `@import` and new `@use` and `@forward`.
-</p>
+The old-way in Sass was to `@import` files to combine them into single CSS file or to use `$var`s, `@mixin`s
+or `@function`s from another SCSS files. **Modules resolve drawbacks of `@import`, which are:**
+1. **Global scope**:
+All members (vars, mixins and functions) are globally accessible and hard to trace where are defined.
+2. **Naming collisions**:
+Because of global scope that is easy to unintentionally override some members. _That's why prefixes like
+`$button-height` were widely used._
+3. **May be confused** with [native CSS `@import` rule](https://www.w3.org/TR/css-cascade-3/#at-import).
+4. **`@import` is slower than `@use`** as it executes stylesheet and emits CSS on every occurrence.
+
+`@forward` rule works similar to `@use` but allows other modules to be `@use`d directly from module where are forwarded.
+It's handful when you want to organize stylesheets across many files but provide single entry point - great for UI libraries!
+
+[Examples.](src/examples/3-modules)
 
 **Further readings:**
+- [Sass: Documentation - @import](https://sass-lang.com/documentation/at-rules/import) — sass-lang.com
 - [Sass: Documentation - @use](https://sass-lang.com/documentation/at-rules/use) — sass-lang.com
 - [Sass: Documentation - @forward](https://sass-lang.com/documentation/at-rules/forward) — sass-lang.com
 </details>

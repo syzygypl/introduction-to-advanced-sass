@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "npm run build:styles",
     "build": "react-scripts build",
+    "build:examples": "sass --style=expanded './src/examples/examples.scss' './src/examples/examples.css'",
     "test": "react-scripts test",
     "lint:scripts": "eslint \"src/**/*{ts,tsx,js,jsx}\"",
     "lint:styles": "stylelint \"src/**/*.{scss,css}\"",

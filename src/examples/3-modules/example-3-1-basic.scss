@@ -1,0 +1,58 @@
+// Old way
+@import "../../vars";
+$color: $color-bg;
+
+// `@use` / auto namespace
+@use "../../vars";
+$color: vars.$color-bg;
+
+// `@use` / named namespace
+@use "../../vars" as variables;
+$color: variables.$color-bg;
+
+// `@use` / no namespace
+@use "../../vars" as *;
+$color: $color-bg;
+
+// `@forward`
+@forward "../../vars";
+
+// `@forward` with prefix
+@forward "../../vars" as vars-*;
+
+// `@forward` and `@use` can be combined
+@forward "../../vars" as vars-*;
+@use "../../vars";
+$color: vars.$color-bg;
+
+
+// Old way - override
+@import "../../vars";
+$color-bg: #333;
+
+// @use - override
+@use "../../vars" with (
+    $color-bg: red,
+);
+
+// `@forward` - override
+@forward "../../vars" with (
+    $color-bg: red,
+);
+
+
+// Private members
+$-private-var: 10px;
+
+@function -private-func($value) {
+    @return $value * 10;
+}
+
+@mixin -private-mixin {
+    // ...
+}
+
+
+// Members visibility
+@forward "../../vars" hide $color-bg, $color-text, some-function;
+@forward "../../vars" show $color-text;

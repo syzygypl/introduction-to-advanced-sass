@@ -11,7 +11,9 @@ module.exports = {
     'stylelint-config-syzygy-scss',
     'stylelint-config-syzygy-order',
   ],
-  ignoreFiles: [],
+  ignoreFiles: [
+    'src/examples/**/*',
+  ],
   'rules': {
     'plugin/selector-bem-pattern': bemSettings['rules']['plugin/selector-bem-pattern'],
   },
