@@ -7,6 +7,16 @@
 @use "node_modules/normalize.css/normalize.css";
 
 /* stylelint-disable plugin/selector-bem-pattern */
+:root {
+    @each $name, $props in $themes {
+        @if ($name == "light" or $name == "dark") {
+            @media (prefers-color-scheme: #{$name}) {
+                @include create-custom-props($props);
+            }
+        }
+    }
+}
+
 body {
     @each $name, $props in $themes {
         &[data-theme="#{$name}"] {
@@ -42,14 +52,9 @@ svg {
     pointer-events: none;
 }
 
-:root {
-    @each $name, $props in $themes {
-        @if ($name == "light" or $name == "dark") {
-            @media (prefers-color-scheme: #{$name}) {
-                @include create-custom-props($props);
-            }
-        }
-    }
+::selection {
+    background: $color-selection-bg;
+    color: $color-selection-text;
 }
 /* stylelint-enable plugin/selector-bem-pattern */
 

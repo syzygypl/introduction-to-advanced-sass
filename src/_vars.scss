@@ -14,6 +14,8 @@ $color-bg: var(--color-bg) !default;
 $color-bg-odd: var(--color-bg-odd) !default;
 $color-text: var(--color-text) !default;
 $color-primary: var(--color-primary) !default;
+$color-selection-bg: rgba(#c9659b, .75);
+$color-selection-text: #fff;
 
 $font-primary: "Arial", sans-serif;
 $font-sizes-base: (
