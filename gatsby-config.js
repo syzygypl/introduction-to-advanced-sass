@@ -2,11 +2,12 @@ const sass = require('sass');
 const sassJsonImporter = require('node-sass-json-importer');
 
 module.exports = {
+  pathPrefix: '/introduction-to-advanced-sass',
   siteMetadata: {
     title: 'Introduction to advanced Sass',
-    description: '',
-    author: '@norin89',
-    siteUrl: 'https://localhost:8000',
+    description: 'Brief description of advanced Sass features and good practices spiced up with some explanations, examples and useful links',
+    author: 'Marcin Gościcki',
+    siteUrl: 'https://syzygypl.github.io/introduction-to-advanced-sass/',
   },
   plugins: [
     {
