@@ -1,6 +1,7 @@
 /** @define markdown */
 
 @use "src/vars" as *;
+@use "src/mixins" as *;
 
 .markdown {
     display: block;
@@ -48,8 +49,7 @@
     blockquote {
         margin: 2em 0;
         padding: 1em 2em;
-        background: $color-bg-odd;
-        color: $color-text;
+        @include transition-colors($color-bg-odd, $color-text);
     }
 
     .-is-hidden {

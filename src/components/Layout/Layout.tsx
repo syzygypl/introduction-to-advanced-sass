@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import './Layout.scss';
+import Themes from '../Themes/Themes';
 import Header from '../Header/Header';
 import logo from '../../images/logo.svg';
 
@@ -28,6 +29,7 @@ function Layout({
 
   return (
     <div className="layout">
+      <Themes className="layout__themes" />
       <Header className="layout__header" siteTitle={siteTitle} />
       <main className="layout__content">
         <img className="layout__image" src={logo} alt="Sass logo" />

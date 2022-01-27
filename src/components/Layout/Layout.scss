@@ -1,16 +1,23 @@
 /** @define layout */
-@use "node_modules/normalize.css/normalize.css";
+@use "sass:list";
 @use "src/vars" as *;
+@use "src/functions" as *;
 @use "src/mixins" as *;
+
+@use "node_modules/normalize.css/normalize.css";
 
 /* stylelint-disable plugin/selector-bem-pattern */
 body {
+    @each $name, $props in $themes {
+        &[data-theme="#{$name}"] {
+            @include create-custom-props($props);
+        }
+    }
     display: block;
     min-height: 100%;
     margin: 0;
     padding: 0;
-    background: $color-bg-odd;
-    color: $color-text;
+    @include transition-colors($color-bg-odd, $color-text);
     font: normal 1em/#{$line-height} $font-primary;
     @include each-breakpoint($font-sizes-base, font-size);
     text-rendering: optimizelegibility;
@@ -27,6 +34,16 @@ body {
 img {
     max-width: 100%;
 }
+
+:root {
+    @each $name, $props in $themes {
+        @if ($name == "light" or $name == "dark") {
+            @media (prefers-color-scheme: #{$name}) {
+                @include create-custom-props($props);
+            }
+        }
+    }
+}
 /* stylelint-enable plugin/selector-bem-pattern */
 
 .layout {
@@ -34,8 +51,11 @@ img {
     flex-direction: column;
     align-content: stretch;
     min-height: 100vh;
-    background: $color-bg;
-    color: $color-text;
+    @include transition-colors($color-bg, $color-text);
+
+    &__header {
+        z-index: z-index("header");
+    }
 
     &__content {
         max-width: $content-max-width;
@@ -49,5 +69,16 @@ img {
         margin: 0 auto;
         width: 40%;
         max-width: 250px;
+    }
+
+    @include media(md) {
+        position: relative;
+
+        &__themes {
+            position: fixed;
+            right: $gutter;
+            top: $gutter;
+            z-index: z-index("themes");
+        }
     }
 }

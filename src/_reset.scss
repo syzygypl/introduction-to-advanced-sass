@@ -1,0 +1,19 @@
+@mixin list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin button {
+    overflow: visible;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    text-align: inherit;
+    appearance: none;
+}

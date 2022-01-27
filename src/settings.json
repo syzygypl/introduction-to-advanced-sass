@@ -5,5 +5,20 @@
     "md": 768,
     "lg": 992,
     "xl": 1320
-  }
+  },
+  "themes": {
+    "light": {
+      "color-bg": "#fafafa",
+      "color-bg-odd": "#e1e1e1",
+      "color-text": "#000",
+      "color-primary": "#c9659b"
+    },
+    "dark": {
+      "color-bg": "#1a1a1a",
+      "color-bg-odd": "#000",
+      "color-text": "#fff",
+      "color-primary": "#c9659b"
+    }
+  },
+  "default-theme": "dark"
 }

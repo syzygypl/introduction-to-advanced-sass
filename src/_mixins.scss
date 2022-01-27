@@ -1,5 +1,8 @@
 @use "sass:meta";
+@use "vars" as *;
 @use "functions" as *;
+
+@forward "reset" as reset-*;
 
 @mixin media($minWidth, $maxWidth: null) {
     @if meta.type-of($minWidth) != number {
@@ -43,4 +46,18 @@
             }
         }
     }
+}
+
+@mixin create-custom-props($props) {
+    @each $prop, $value in $props {
+        --#{$prop}: #{$value};
+    }
+}
+
+@mixin transition-colors($color-bg, $color-text) {
+    background: $color-bg;
+    color: $color-text;
+    transition:
+        background $transition-time * 2,
+        color $transition-time * 2;
 }

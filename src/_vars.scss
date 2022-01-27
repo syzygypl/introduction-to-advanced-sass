@@ -6,13 +6,14 @@ $content-max-width: 960px;
 $gutter: 10px;
 
 $z-index: (
-    "header": 19,
+    "header": 18,
+    "themes": 19,
 );
-
-$color-bg: #1a1a1a !default;
-$color-bg-odd: color.adjust($color-bg, $lightness: -10%);
-$color-text: #fff !default;
-$color-primary: #c9659b !default;
+$themes: () !default;
+$color-bg: var(--color-bg) !default;
+$color-bg-odd: var(--color-bg-odd) !default;
+$color-text: var(--color-text) !default;
+$color-primary: var(--color-primary) !default;
 
 $font-primary: "Arial", sans-serif;
 $font-sizes-base: (

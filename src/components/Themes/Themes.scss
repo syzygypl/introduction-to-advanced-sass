@@ -1,0 +1,71 @@
+/** @define themes */
+@use "sass:map";
+@use "sass:list";
+@use "src/vars" as *;
+@use "src/mixins" as *;
+@use "src/functions" as *;
+
+$dark-color-bg: get-map-value($themes, "dark", color-bg);
+$dark-color-text: get-map-value($themes, "dark", color-text);
+$light-color-bg: get-map-value($themes, "light", color-bg);
+$light-color-text: get-map-value($themes, "light", color-text);
+
+.themes {
+    @include reset-list;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: $gutter;
+    padding: ($gutter * .5) ($gutter * .5) 0;
+    @include transition-colors($color-bg-odd, $color-text);
+
+    &__button {
+        @include reset-button;
+        overflow: hidden;
+        width: 3.333em;
+        height: 3.333em;
+        margin: .25em 0;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        font-size: .75rem;
+        text-align: center;
+        transition: all $transition-time;
+        cursor: pointer;
+
+        &--auto {
+            position: relative;
+            border-color: var(--color-text);
+            background: var(--color-bg);
+            color: var(--color-text);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(-45deg, $light-color-bg 45%, $dark-color-bg 55%);
+                mix-blend-mode: difference;
+            }
+        }
+
+        &.-is-active {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 .5em var(--color-primary);
+            pointer-events: none;
+        }
+
+        &:focus,
+        &:hover {
+            opacity: .75;
+        }
+    }
+
+    @include media(md) {
+        padding: 0;
+        background: none;
+        color: inherit;
+    }
+}

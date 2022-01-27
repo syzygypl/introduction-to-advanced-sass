@@ -19,5 +19,6 @@ module.exports = {
     'plugin/selector-bem-pattern': bemSettings.rules['plugin/selector-bem-pattern'],
     'scss/at-import-partial-extension': 'always',
     'selector-class-pattern': '',
+    'custom-property-pattern': '',
   },
 };

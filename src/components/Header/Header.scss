@@ -1,16 +1,14 @@
 /** @define header */
 
 @use "src/vars" as *;
-@use "src/functions" as *;
+@use "src/mixins" as *;
 
 .header {
     position: sticky;
     top: 0;
-    z-index: z-index("header");
     display: block;
     padding: $gutter * 2;
-    background: $color-bg-odd;
-    color: $color-text;
+    @include transition-colors($color-bg-odd, $color-text);
     text-align: center;
 
     &__logo {
