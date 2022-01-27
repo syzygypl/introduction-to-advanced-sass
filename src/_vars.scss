@@ -6,14 +6,17 @@ $content-max-width: 960px;
 $gutter: 10px;
 
 $z-index: (
-    "header": 18,
-    "themes": 19,
+    "content": 11,
+    "header": 19,
 );
+
 $themes: () !default;
 $color-bg: var(--color-bg) !default;
 $color-bg-odd: var(--color-bg-odd) !default;
 $color-text: var(--color-text) !default;
 $color-primary: var(--color-primary) !default;
+$color-inverted-bg: var(--color-text) !default;
+$color-inverted-text: var(--color-bg-odd) !default;
 $color-selection-bg: rgba(#c9659b, .75);
 $color-selection-text: #fff;
 

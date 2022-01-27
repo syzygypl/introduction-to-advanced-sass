@@ -87,11 +87,36 @@ a {
     min-height: 100vh;
     @include transition-colors($color-bg, $color-text);
 
+    &__inner {
+        position: relative;
+    }
+
     &__header {
+        position: sticky;
+        top: -1px; // trick for easier IntersectionObserver for stickiness
         z-index: z-index("header");
     }
 
+    &__repo {
+        padding: $gutter;
+        border: 0;
+        @include transition-colors($color-inverted-bg, $color-inverted-text);
+        text-align: center;
+        transition: all $transition-time;
+
+        svg {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: .5em;
+            width: 1.25em;
+            height: 1.25em;
+            fill: currentcolor;
+        }
+    }
+
     &__content {
+        position: relative;
+        z-index: z-index("content");
         max-width: $content-max-width;
         margin: auto;
         padding: ($gutter * 4) ($gutter * 2);
@@ -103,16 +128,5 @@ a {
         margin: 0 auto;
         width: 40%;
         max-width: 250px;
-    }
-
-    @include media(md) {
-        position: relative;
-
-        &__themes {
-            position: fixed;
-            right: $gutter;
-            top: $gutter;
-            z-index: z-index("themes");
-        }
     }
 }

@@ -4,8 +4,7 @@
 @use "src/mixins" as *;
 
 .header {
-    position: sticky;
-    top: 0;
+    $root: &;
     display: block;
     padding: $gutter * 2;
     @include transition-colors($color-bg-odd, $color-text);
@@ -15,7 +14,39 @@
         display: inline-block;
         height: 2em;
         width: 2em;
-        margin: -1em 1em -1em 0;
+        margin: -.5em .5em -.5em 0;
         vertical-align: middle;
+    }
+
+
+    @include media(xs, md) {
+        &__themes {
+            margin: (-$gutter * .5) 0 ($gutter * 1.5);
+            max-height: 200px; // just some large number as `height` can't be animated if `auto`
+            transition:
+                all ($transition-time * 2),
+                opacity ($transition-time * 2) $transition-time;
+        }
+
+        &.-is-sticky {
+            #{$root}__themes {
+                max-height: 0;
+                margin: 0;
+                opacity: 0;
+                transition:
+                    all ($transition-time * 2) $transition-time,
+                    opacity $transition-time * 2;
+            }
+        }
+    }
+
+    @include media(md) {
+        &__themes {
+            position: absolute;
+            right: $gutter;
+            top: 50%;
+            margin: 0;
+            transform: translateY(-50%);
+        }
     }
 }

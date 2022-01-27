@@ -41,5 +41,9 @@
             @extend .accordion__label;
         }
     }
+
+    .-is-hidden {
+        display: none;
+    }
     /* stylelint-enable plugin/selector-bem-pattern */
 }

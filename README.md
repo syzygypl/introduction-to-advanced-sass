@@ -14,6 +14,12 @@ ____
   - Point where described things can be found in code.<br />
 </p>
 
+<div class="-is-hidden">
+
+## Go to [live demo](https://syzygypl.github.io/introduction-to-advanced-sass/)!
+
+</div>
+
 ____
 
 

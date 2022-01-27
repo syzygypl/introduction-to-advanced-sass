@@ -17,8 +17,9 @@ $light-color-text: get-map-value($themes, "light", color-text);
     justify-content: center;
     align-items: center;
     gap: $gutter;
-    padding: ($gutter * .5) ($gutter * .5) 0;
-    @include transition-colors($color-bg-odd, $color-text);
+    background: none;
+    color: inherit;
+
 
     &__button {
         @include reset-button;
@@ -61,11 +62,5 @@ $light-color-text: get-map-value($themes, "light", color-text);
         &:hover {
             opacity: .75;
         }
-    }
-
-    @include media(md) {
-        padding: 0;
-        background: none;
-        color: inherit;
     }
 }

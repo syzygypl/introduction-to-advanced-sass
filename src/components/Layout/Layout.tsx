@@ -2,10 +2,10 @@ import React, { ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import './Layout.scss';
-import Themes from '../Themes/Themes';
 import Header from '../Header/Header';
-import Accordion from '../Accordion/Accordion';
-import Logo from '../../images/logo.svg';
+import Themes from '../Themes/Themes';
+import SassLogo from '../../images/sass-logo.svg';
+import GithubIcon from '../../images/github-icon.svg';
 
 interface LayoutProps {
   children: ReactNode;
@@ -30,11 +30,14 @@ function Layout({
 
   return (
     <div className="layout">
-      <Themes className="layout__themes" />
+      <a className="layout__repo" href="https://github.com/syzygypl/introduction-to-advanced-sass">
+        <GithubIcon />
+        Show code on GitHub
+      </a>
       <Header className="layout__header" siteTitle={siteTitle} />
       <main className="layout__content">
         <span className="layout__image">
-          <Logo />
+          <SassLogo />
         </span>
         {children}
       </main>
