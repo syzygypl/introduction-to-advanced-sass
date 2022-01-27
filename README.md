@@ -127,7 +127,7 @@ Good examples are: elements resets, repetitive styles (_like consistent borders 
 
 <p style="color: red;">
   <strong>TODO:</strong>
-  What are Mixins for? Drawbacks - code order. When you `@extend` in separate file it's OK.<br />
+  What are Extends for? Drawbacks - code order. When you `@extend` in separate file it's OK.<br />
   Include is usually better / safer especially when gzip is used. <br />
   What are `%placeholders`.<br />
 </p>
@@ -141,9 +141,7 @@ Good examples are: elements resets, repetitive styles (_like consistent borders 
 <summary><i>Click to expand!</i></summary>
 
 <p style="color: red;">
-  <strong>TODO:</strong>
-  What are Mixins for? Drawbacks - code order. When you `@extend` in separate file it's OK.<br />
-  Include is usually better / safer especially when gzip is used. <br />
+  <strong>TODO</strong>
 </p>
 
 **Further readings:**
@@ -168,11 +166,6 @@ create the importer](https://sass-lang.com/documentation/js-api/modules#CustomFu
 <small>
   NOTE: Many importers names starts with `node-sass` but most will work with Dart Sass as API is compatible. 
 </small>
-
-<p style="color: red;">
-  <strong>TODO:</strong>
-  Add custom functions and JSON importer to the repo.
-</p>
 
 **Further readings:**
 - [Sass: Documentation - JavaScript API - Interface Importer](https://sass-lang.com/documentation/js-api/interfaces/Importer) — sass-lang.com
