@@ -3,6 +3,7 @@
 @use "src/vars" as *;
 @use "src/mixins" as *;
 
+$line-height: 1.25;
 $settings: (
     h1: (
         font-size: 2.5rem,
@@ -29,6 +30,7 @@ $settings: (
     display: block;
     font-family: $font-primary;
     font-weight: bold;
+    line-height: $line-height;
 
     @each $tag, $props in $settings {
         &--#{$tag} {

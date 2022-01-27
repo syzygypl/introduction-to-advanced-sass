@@ -53,7 +53,7 @@ $light-color-text: get-map-value($themes, "light", color-text);
 
         &.-is-active {
             border-color: var(--color-primary);
-            box-shadow: 0 0 .5em var(--color-primary);
+            box-shadow: 0 0 1em .25em var(--color-primary);
             pointer-events: none;
         }
 
