@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import './Layout.scss';
 import Themes from '../Themes/Themes';
 import Header from '../Header/Header';
-import logo from '../../images/logo.svg';
+import Logo from '../../images/logo.svg';
 
 interface LayoutProps {
   children: ReactNode;
@@ -32,7 +32,10 @@ function Layout({
       <Themes className="layout__themes" />
       <Header className="layout__header" siteTitle={siteTitle} />
       <main className="layout__content">
-        <img className="layout__image" src={logo} alt="Sass logo" />
+        <span className="layout__image">
+          <Logo />
+        </span>
+        {/*<img className="layout__image" src={Logo} alt="Sass logo" />*/}
         {children}
       </main>
     </div>

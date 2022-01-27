@@ -81,7 +81,7 @@ Because of global scope that is easy to unintentionally override some members. _
 3. **May be confused** with [native CSS `@import` rule](https://www.w3.org/TR/css-cascade-3/#at-import).
 4. **`@import` is slower than `@use`** as it executes stylesheet and emits CSS on every occurrence.
 
-`@forward` rule works similar to `@use` but allows other modules to be `@use`d directly from module where are forwarded.
+`@forward` rule works similar to `@use` but allows other modules to be used directly from module where are forwarded.
 It's handful when you want to organize stylesheets across many files but provide single entry point - great for UI libraries!
 
 **Further readings:**

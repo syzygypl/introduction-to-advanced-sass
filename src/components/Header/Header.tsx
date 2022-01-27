@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 import './Header.scss';
-import icon from '../../images/icon.png';
+import Icon from '../../images/icon.svg';
 
 interface HeaderProps {
   siteTitle: string;
@@ -15,7 +15,9 @@ function Header({
 }: HeaderProps) {
   return (
     <header className={cx('header', className)}>
-      <img className="header__logo" src={icon} alt="Sass logo" />
+      <span className="header__logo">
+        <Icon />
+      </span>
       {siteTitle}
     </header>
   );
