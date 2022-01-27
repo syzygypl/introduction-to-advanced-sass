@@ -111,7 +111,7 @@ It's handful when you want to organize stylesheets across many files but provide
 <summary><i>Click to expand!</i></summary>
 
 In the past most examples of `@mixin`s I can remember were about adding vendor prefixes. Up to early 2019 it was even
-in the [official documentation of Sass]((https://web.archive.org/web/20190208030244/http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variable_arguments)).
+in the [official documentation of Sass](https://web.archive.org/web/20190208030244/http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variable_arguments).
 Now we have better alternatives for that, like [Autoprefixer](https://autoprefixer.github.io/).
 
 **`@mixin`s are still very useful when we have reusable blocks of styles** or / and we want to assure consistency.
