@@ -6,6 +6,11 @@
     @return get-map-value($breakpoints, $key) * 1px;
 }
 
+@function z-index($key) {
+    @return get-map-value($z-index, $key);
+}
+
+/** Similar to `map.get()` but warns if map element is not found. */
 @function get-map-value($map, $keys...) {
     @each $key in $keys {
         $isValidKey: map.has-key($map, $key);
@@ -22,7 +27,7 @@
     @return $map;
 }
 
-// Similar to `get-map-value` but falls back to smaller BP if there's no key found in map for given BP
+/** Similar to `get-map-value` but falls back to smaller BP if there's no key found in map for given breakpoint. */
 @function get-bp-value($map, $bp) {
     $index: list.index(map.keys($breakpoints), $bp);
 
@@ -37,8 +42,4 @@
     }
 
     @return map-get($map, $bp);
-}
-
-@function z-index($key) {
-    @return get-map-value($z-index, $key);
 }
