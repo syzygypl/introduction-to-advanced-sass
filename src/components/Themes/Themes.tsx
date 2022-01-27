@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import cx from 'classnames';
 import useLocalStorage from 'use-local-storage';
@@ -34,22 +34,20 @@ function Themes({
             auto
           </button>
         </li>
-        {Object.entries(themes).map(([name, params]) => {
-          return (
-            <li className="themes__item" key={name}>
-              <button
-                className={cx('themes__button', {
-                  '-is-active': name === theme,
-                })}
-                style={{ backgroundColor: params['color-bg'], color: params['color-text'] }}
-                type="button"
-                onClick={() => setTheme(name)}
-              >
-                {name}
-              </button>
-            </li>
-          );
-        })}
+        {Object.entries(themes).map(([name, params]) => (
+          <li className="themes__item" key={name}>
+            <button
+              className={cx('themes__button', {
+                '-is-active': name === theme,
+              })}
+              style={{ backgroundColor: params['color-bg'], color: params['color-text'] }}
+              type="button"
+              onClick={() => setTheme(name)}
+            >
+              {name}
+            </button>
+          </li>
+        ))}
       </ul>
     </>
   );

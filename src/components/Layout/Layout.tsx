@@ -35,7 +35,6 @@ function Layout({
         <span className="layout__image">
           <Logo />
         </span>
-        {/*<img className="layout__image" src={Logo} alt="Sass logo" />*/}
         {children}
       </main>
     </div>
