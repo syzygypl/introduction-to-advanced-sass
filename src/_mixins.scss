@@ -31,7 +31,7 @@
             }
         }
     } @else {
-        @warn "Unfortunately, no value could be retrieved from '#{$minWidth}'." + " Please make sure it is defined in `$breakpoints` map.";
+        @warn "Unfortunately, no value could be retrieved from '#{$minWidth}'." + " Please make sure it is defined in `$breakpoints` map."; // stylelint-disable-line max-line-length
     }
 }
 

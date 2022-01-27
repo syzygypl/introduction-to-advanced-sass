@@ -1,3 +1,6 @@
+const sass = require('sass');
+const sassJsonImporter = require('node-sass-json-importer');
+
 module.exports = {
   siteMetadata: {
     title: 'Introduction to advanced Sass',
@@ -6,7 +9,15 @@ module.exports = {
     siteUrl: 'https://localhost:8000',
   },
   plugins: [
-    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        implementation: sass,
+        sassOptions: {
+          importer: sassJsonImporter(),
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
     {
