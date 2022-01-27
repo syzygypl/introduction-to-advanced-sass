@@ -2,63 +2,44 @@
 
 @use "src/vars" as *;
 @use "src/mixins" as *;
+@use "../Title/Title" as title;
+@use "../Blockquote/Blockquote" as blockquote;
+@use "../Accordion/Accordion" as accordion;
 
 .markdown {
     display: block;
 
     /* stylelint-disable plugin/selector-bem-pattern */
-    h1 {
-        text-align: center;
+    @each $level in [1, 2 ,3, 4, 5, 6] {
+        h#{$level} {
+            @extend .title;
+            @extend .title--h#{$level};
+        }
     }
 
     h2 {
         margin-top: 4em;
-    }
 
-    details {
-        margin-bottom: 4em;
-    }
-
-    summary {
-        opacity: .667;
-        cursor: pointer;
-    }
-
-    a {
-        border-bottom: 1px dotted;
-        color: inherit;
-        text-decoration: none;
-        transition: opacity $transition-time;
-
-        &:focus,
-        &:hover {
-            opacity: .5;
+        + p {
+            margin-top: -1em;
         }
     }
 
-    hr {
-        border: 0;
-        border-top: 1px dashed;
-        opacity: .5;
-    }
-
-    code {
-        color: $color-primary;
-    }
-
     blockquote {
-        margin: 2em 0;
-        padding: 1em 2em;
-        @include transition-colors($color-bg-odd, $color-text);
+        @extend .blockquote;
+
+        > p {
+            @extend .blockquote__text;
+        }
     }
 
-    .-is-hidden {
-        display: none;
-    }
+    details {
+        @extend .accordion;
+        margin-bottom: 4em;
 
-    > p:last-child {
-        text-align: center;
-        opacity: .5;
+        > summary {
+            @extend .accordion__label;
+        }
     }
     /* stylelint-enable plugin/selector-bem-pattern */
 }

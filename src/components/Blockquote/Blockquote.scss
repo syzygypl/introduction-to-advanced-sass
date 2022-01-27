@@ -1,0 +1,18 @@
+/** @define blockquote */
+
+@use "src/vars" as *;
+@use "src/mixins" as *;
+
+.blockquote {
+    display: block;
+    margin: 2em 0;
+    padding: .5em 1.5em;
+    border: 1px dashed;
+    font: normal .833rem/#{$line-height} $font-primary;
+    font-style: italic;
+    @include transition-colors($color-bg-odd, $color-text);
+
+    &__text {
+        margin: 1em 0;
+    }
+}

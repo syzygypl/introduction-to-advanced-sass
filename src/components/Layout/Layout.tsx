@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import './Layout.scss';
 import Themes from '../Themes/Themes';
 import Header from '../Header/Header';
+import Accordion from '../Accordion/Accordion';
 import Logo from '../../images/logo.svg';
 
 interface LayoutProps {

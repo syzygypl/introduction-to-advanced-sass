@@ -1,0 +1,16 @@
+/** @define accordion */
+
+@use "src/vars" as *;
+@use "src/mixins" as *;
+
+.accordion {
+    display: block;
+
+    &__label {
+        font: normal 1rem/#{$line-height} $font-primary;
+        font-style: italic;
+        opacity: .667;
+        cursor: pointer;
+        user-select: none;
+    }
+}
