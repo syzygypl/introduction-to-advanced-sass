@@ -1,22 +1,17 @@
 # Introduction to advanced [Sass](https://sass-lang.com/)
+by [Marcin Gościcki](https://goscicki.eu/) — 28 January 2022
 
-This is a brief description of Sass features and good practices spiced up with some explanations, examples  and useful
+This is a brief description of Sass features and good practices spiced up with some explanations, examples and useful
 links. It doesn't cover all the aspects (_like [partials](https://sass-lang.com/documentation/at-rules/use#partials),
 [nesting](https://sass-lang.com/documentation/style-rules#nesting) or [operators](https://sass-lang.com/documentation/operators)_)
 and requires at least basic knowledge of Sass. [Learn Sass](https://sass-lang.com/guide)!
 
-____
-
-<p style="color: red;">
-  <strong>TODO:</strong><br />
-  - How to run project and what for?<br />
-  - Describe that project itself is an example of stuff described below.<br />
-  - Point where described things can be found in code.<br />
-</p>
+[Demo page](https://syzygypl.github.io/introduction-to-advanced-sass/) itself was created using described solutions
+and techniques so go ahead and [check the code](https://github.com/syzygypl/introduction-to-advanced-sass).
 
 <div class="-is-hidden">
 
-## Go to [live demo](https://syzygypl.github.io/introduction-to-advanced-sass/)!
+## Go to [demo page](https://syzygypl.github.io/introduction-to-advanced-sass/)!
 
 </div>
 
@@ -253,6 +248,6 @@ ____
 ____
 <center>
 
-© Marcin Gościcki ([@norin89](https://github.com/norin89)) / [SYZYGY Warsaw](https://www.syzygy.pl/) — 2022
+© [Marcin Gościcki](https://goscicki.eu/) / [SYZYGY Warsaw](https://www.syzygy.pl/) — 2022
 
 </center>
