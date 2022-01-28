@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import './Layout.scss';
 import Header from '../Header/Header';
-import Themes from '../Themes/Themes';
 import SassLogo from '../../images/sass-logo.svg';
 import GithubIcon from '../../images/github-icon.svg';
 

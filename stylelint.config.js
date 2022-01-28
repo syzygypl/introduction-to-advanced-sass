@@ -20,6 +20,5 @@ module.exports = {
     'scss/at-import-partial-extension': 'always',
     'selector-class-pattern': '',
     'custom-property-pattern': '',
-    'scss/at-extend-no-missing-placeholder': 'never',
   },
 };
